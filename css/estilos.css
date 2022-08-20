@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-negro:#07020D;
+    --color-blanco:#FFFFFF;
+    --color-blanco-2:#F1E9DB;
+    --color-acento:#5DB7DE;
+    --color-marron1:#A39B8B;
+    --color-marron2:#716A5C;
+}
+
+/* Estilos globales */
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: var(--color-negro);
+    background-color: var(--color-blanco-2);
+    margin: 0;
+    line-height: 1.5;
+}
+
+section {
+    width: 1250px;
+    text-align: center;
+    margin: 25px auto;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Encabezado, barra de navegación */
+header {
+    background-color:var(--color-negro);
+    text-align: center;
+    padding: 35px 0 20px;
+}
+
+header ul,
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+}
+
+header li,
+footer li {
+    display: inline-block;
+    margin: 8px;
+}
+
+.contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1250px;
+    margin: 0 auto;
+}
+
+/* Links barra de navegación */
+a.nav:link, a.nav:visited {
+    color: #F1E9DB;
+    display: inline-block;
+    margin: 0 16px;
+}
+
+a.nav:hover, a.nav:active {
+    color: #5DB7DE;
+}
+
+/* Sección de Bienvenida y Novedades */
+#bienvenida {
+    height: 650px;
+
+    background-image: url('../img/bienvenida_sm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bienvenida-titulo {
+    background-color: #07020dca;
+    color: var(--color-blanco-2);
+    padding: 32px;
+}
+
+/* Novedades */
+.contenedor-novedades {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+article {
+    flex-basis: 247px;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+a.novedades:link,
+a.novedades:visited {
+    display: block;
+    color: #07020D;
+    text-decoration: none;
+    border: 3px solid #5DB7DE;
+    padding: 12px 24px;
+    border-radius: 16px;
+}
+
+a.novedades:hover,
+a.novedades:active {
+    background-color: #5DB7DE;
+    border: 3px solid #07020D;
+}
+
+/* Footer, Pié de página */
+footer {
+    background-color: var(--color-marron1);
+    color: var(--color-blanco-2);
+    font-weight: 600;
+    line-height: 1.8;
+    text-align: center;
+
+    padding-top: 75px;
+    height: 250px;
+}
+
+/*-------------- Formularios --------------*/
+
+/* Formulario de búsqueda */
+.buscar > input {
+    margin-top: 10px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 3px solid var(--color-marron2);
+}
+
+.buscar > button {
+    margin-top: 10px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    background-color: var(--color-acento);
+    border: 3px solid var(--color-marron2);
+}
+
+.buscar > input:focus,
+.buscar > button:focus {
+    outline: none;
+    border: 3px solid var(--color-acento);
+}
+
+/* Login, Contacto, Registro */
+.formulario label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+    display: block; /* agrega los saltos de línea*/
+    width: 450px; /* ancho */
+    margin: 15px auto; /* centra el elemento */
+
+    padding: 10px; /* área del texto */
+
+    border-radius: 0px;  /* ajuste del radio de las esquinas */
+    border: none;
+    border-bottom: 2px solid var(--color-marron2);
+
+    outline: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+    border-bottom: 2px solid var(--color-acento);
+}
+
+.formulario textarea {
+    height: 200px;
+}
+
+.formulario .opciones {
+    display: inline-block; /* línea bloque, no tiene saltos de línea y el ancho del elemento es fijado por su contenido. */
+    width: auto;
+    margin: 5px;
+}
+
+.formulario .submit {
+    background-color: var(--color-acento);
+    font-weight: 700;
+    border: none;
+}
+
+/* Exito */
+#exito {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Libros, detalle */
+#libros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#libros img {
+    width: 80%;
+    max-width: 360px;
+    margin-right: 30px;
+}
+
+.derecha {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 600px;
+    gap: 16px;
+}
+
+.derecha > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.derecha > ul > li {
+    display: inline-block;
+}
+
+#libros h1, 
+#libros h2,
+#libros h3, 
+#libros p, 
+#libros ul {
+    margin: 0;
+    padding: 0;
+}
+
+#libros h3 {
+    font-size: 36px;
+    color: var(--color-negro);
+    font-weight: 400;
+}
+
+#libros i {
+    font-size: 20px;
+    color: var(--color-marron2);
+    margin-right: 16px;
+}
+
+#libros i:hover {
+    color: var(--color-acento);
+    cursor: pointer;
+}
+
+#libros p {
+    line-height: 22px;
+}
+
+#libros button {
+    background-color: var(--color-blanco-2);
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: var(--negro);
+    border: 2px solid var(--color-acento);
+    border-radius: 16px;
+    padding: 15px 25px;
+}
+
+#libros button:hover {
+    background-color: var(--color-acento);
+    border-color: var(--color-negro);
+}
+
+/* Catálogo */
+#catalogo table {
+    margin: 0 auto;
+    width: 1250px;
+}
+
+#catalogo img {
+    width: 100%;
+}
+
+#catalogo th, td {
+    padding: 16px;
+}
+
+#catalogo th {
+    background-color: var(--color-acento);
+}
+
+#catalogo td {
+    background-color: var(--color-marron1);
+}
+
+#catalogo tr:nth-child(odd) td {
+    background-color: var(--color-marron2);
+}
+
+#catalogo tr:hover td {
+    background-color: var(--color-acento);
+}
+
+/* Sobre Nosotros */
+.contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-top: 32px;
+}
+
+.direccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.direccion > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.direccion > ul > li {
+    display: inline-block;
+}
+
+#sobrenosotros video {
+    width: 65%;
+    height: auto;
+}
+
+#sobrenosotros p {
+    line-height: 20px;
+}
+
+#sobrenosotros i {
+    font-size: 32px;
+    margin-right: 32px;
+}
+
+#sobrenosotros iframe {
+    display: block;
+    width: 1250px;
+    margin: 32px auto;
+    border: none;
+    height: 600px;
+}
